@@ -1,0 +1,19 @@
+<?php
+
+namespace src;
+
+class Task3
+{
+    public function main(int $number): int
+    {
+        if ($number < 0) {
+            throw new \InvalidArgumentException('Function only accepts positive integers. Input was: ' . $number);
+        }
+        $digits = str_split($number);
+        if (count($digits) > 1) {
+            return $this->main(array_sum($digits));
+        }
+
+        return $number;
+    }
+}
