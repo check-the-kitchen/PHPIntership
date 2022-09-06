@@ -4,7 +4,7 @@ namespace src;
 
 class Task6
 {
-    public function main(int $year, int $lastYear, int $month, int $lastMonth, $day = 'Monday'): int
+    public function main(int $year, int $lastYear, int $month, int $lastMonth, string $day = 'Monday'): int
     {
         if ($year < 0 || $lastYear < 0 || $month > 12 || $month < 1 || $lastMonth > 12 || $lastMonth < 1) {
             throw new \InvalidArgumentException('Function only accepts integers.');
