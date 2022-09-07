@@ -15,10 +15,11 @@ class Task2
             throw new \InvalidArgumentException("Required date format: DD-MM-YYYY, your args: $date");
         }
         $tmp = $birthdate;
-        if ($today->diff($birthdate)->format('%R%a') <= 0) {
+        if ($today->diff($birthdate)->format('%R%a') < 0) {
             $tmp = $birthdate->add(new \DateInterval('P1Y'));
         }
 
         return $today->diff($tmp)->format('%a');
     }
 }
+
