@@ -13,8 +13,7 @@ class Task8
                 $result .= $this->searchEndPoint($name, $item);
             }
 
-            return substr_replace($result,"",-1);
-
+            return substr_replace($result, '', -1);
         } catch (\Exception $e) {
             throw new \InvalidArgumentException('Function need json string as parameter. Input was: ' . $json);
         }
@@ -30,4 +29,3 @@ class Task8
         }
     }
 }
-
