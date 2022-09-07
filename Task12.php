@@ -2,6 +2,7 @@
 
 namespace src;
 
+
 class Task12
 {
     private int $firstArg;
@@ -35,6 +36,9 @@ class Task12
 
     public function divide(): Task12
     {
+        if ($this->secondArg == 0) {
+            throw new \InvalidArgumentException("Division by zero");
+        }
         $this->result = intdiv($this->firstArg, $this->secondArg);
 
         return $this;
@@ -56,6 +60,9 @@ class Task12
 
     public function divideBy(int $number): Task12
     {
+        if ($number == 0) {
+            throw new \InvalidArgumentException("Division by zero");
+        }
         $this->result = intdiv($this->result, $number);
 
         return $this;
@@ -74,4 +81,8 @@ class Task12
 
         return $this;
     }
+
+
 }
+$tmp=new Task12(12,0);
+echo $tmp->divide();
