@@ -9,13 +9,12 @@ class Task4
         $words = preg_split('/[-_ ]/', $input);
         $output = '';
         foreach ($words as $word) {
-            if(isset($word[0]))
-            $word[0] = strtoupper($word[0]);
+            if (isset($word[0])) {
+                $word[0] = strtoupper($word[0]);
+            }
             $output .= $word;
         }
 
         return $output;
     }
 }
-
-
