@@ -81,5 +81,3 @@ class Task12
         return $this;
     }
 }
-$tmp = new Task12(12, 0);
-echo $tmp->divide();
