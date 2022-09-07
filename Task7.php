@@ -18,4 +18,3 @@ class Task7
         return $array;
     }
 }
-
