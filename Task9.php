@@ -2,18 +2,16 @@
 
 namespace src;
 
-use http\Exception\InvalidArgumentException;
-
 class Task9
 {
     public function main(array $array, int $number): array
     {
-        foreach ($array as $el){
-            if ($el<0){
-                throw new \InvalidArgumentException("Please, pass correct data: first argument is array, second argument is sum of element");
+        foreach ($array as $el) {
+            if ($el < 0) {
+                throw new \InvalidArgumentException('Please, pass correct data: first argument is array, second argument is sum of element');
             }
         }
-        if (sizeof($array) < 3 || $number<=0) {
+        if (sizeof($array) < 3 || $number <= 0) {
             throw new \InvalidArgumentException('Please, pass correct data: first argument is array, second argument is sum of element');
         }
 
@@ -27,4 +25,3 @@ class Task9
         return $result;
     }
 }
-
