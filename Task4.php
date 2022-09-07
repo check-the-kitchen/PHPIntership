@@ -17,5 +17,5 @@ class Task4
         return $output;
     }
 }
-$tmp= new Task4();
-var_dump($tmp->main('_test_was not-so Interesting_That_funny'));
+
+
