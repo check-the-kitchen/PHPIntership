@@ -13,12 +13,12 @@ class Task3
         return $this->rec($number);
     }
 
-    private function  rec(int $number):int{
+    private function rec(int $number): int
+    {
         $digits = str_split($number);
         if (count($digits) > 1) {
             return $this->rec(array_sum($digits));
-        }
-        else {
+        } else {
             return $digits[0];
         }
     }
