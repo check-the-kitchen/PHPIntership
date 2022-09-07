@@ -18,5 +18,4 @@ class Task3
         return $number;
     }
 }
-$tmp=new Task3();
-echo $tmp->main(7.956);
+
