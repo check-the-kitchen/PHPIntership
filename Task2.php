@@ -6,9 +6,10 @@ class Task2
 {
     public function main(string $date): int
     {
-        if($date=='0-0-0'){
+        if ($date == '0-0-0') {
             throw new \InvalidArgumentException("Required date format: DD-MM-YYYY, your args: $date");
         }
+
         try {
             $dateArr = explode('-', $date);
             $year = explode('-', date('d-m-Y'));
@@ -25,4 +26,3 @@ class Task2
         return $today->diff($tmp)->format('%a');
     }
 }
-
